@@ -98,7 +98,7 @@
                 <figure>
                     <img src="images/project2.png" alt="Portfolio Item">
                     <figcaption>
-                        <a href="https://github.com/b0bbydev/TownOfBWG">
+                        <a href="https://github.com/b0bbydev/town-of-bwg">
                             <h4>Drop-down Menu</h4>
                         </a>
                         <p>Drop-down menu manageable from the front-end</p>
