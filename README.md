@@ -6,4 +6,4 @@ During the development of this project I've learned how to set up a hosting serv
 * PHP - used for backend development.
 * JavaScript - used for some formatting on banner, header and background images. Also included jQuery as well as an Ajax plugin called ```TableEdit``` for convenience of database CRUD functionality.
 * HTML5/CSS3 - for website structure and design.
-* MySQL/MySQL Workbench - used for database management system.
+* MySQL Workbench/phpMyAdmin - used for database management system.
