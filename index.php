@@ -118,12 +118,14 @@
                 <h2>Demos/Fiddles</h2>
                 <div>
                     <form>
-                        <select class="form-control" onchange="changeOptions(this)">
-                            <option disabled selected value>Select a project!</option>
-                            <option value="project_1">SpigotMC Plugin</option>
-                            <option value="project_2">Dropdown menu</option>
-                            <option value="project_3">Arduino Gamepad</option>
-                        </select>
+                        <label for="Project drop down menu">
+                            <select class="form-control" onchange="changeOptions(this)">
+                                <option disabled selected value>Select a project!</option>
+                                <option value="project_1">SpigotMC Plugin</option>
+                                <option value="project_2">Dropdown menu</option>
+                                <option value="project_3">Arduino Gamepad</option>
+                            </select>
+                        </label>
                     </form>
                 </div>
 

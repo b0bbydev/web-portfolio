@@ -76,7 +76,7 @@ a {
 }
 
 p {
-    margin: 0 0 2.5em 0;
+    margin: 0 0 2.1em 0;
     color: rgba(255, 255, 255, 0.75);
 }
 
@@ -753,18 +753,23 @@ select option {
 
 #about h5 {
     text-align: left;
-    padding-bottom: 10px;
+    padding-bottom: 9px;
     color: rgba(255, 255, 255, 0.75);
+    font-size: large;
 }
 
-#delete, #add {
+#add {
     margin-right: 40px;
     padding-left: 40px;
     padding-right: 40px;
 }
 
+#add:hover {
+    background: #636363;
+}
+
 .table-responsive {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.75);
     border-radius: 4px;
 }
 
@@ -788,4 +793,12 @@ span {
 
 .inner i {
     color: rgba(255, 255, 255, 0.75);
+}
+
+.table-responsive tbody {
+    background-color:#dcd8d8;
+}
+
+tr:hover td {
+    background: #c2c2c2;
 }
