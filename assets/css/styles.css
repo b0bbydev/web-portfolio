@@ -802,3 +802,7 @@ span {
 tr:hover td {
     background: #c2c2c2;
 }
+
+.form-control {
+    cursor: pointer;
+}

@@ -116,7 +116,7 @@
                 </figure>
 
                 <h2>Demos/Fiddles</h2>
-                <div>
+                <div class="project-dropdown">
                     <form>
                         <label for="Project drop down menu">
                             <select class="form-control" onchange="changeOptions(this)">
