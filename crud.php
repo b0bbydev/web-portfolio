@@ -80,11 +80,13 @@ include_once('includes/add.php');
                 <br>
                 <div>
                     <h5>Gender</h5>
-                    <select id="gender" name="gender" required>
-                        <option disabled="disabled" selected="selected">Please select one...</option>
-                        <option value="Male">Male</option>
-                        <option value="Female">Female</option>
-                    </select>
+                    <label for="gender">
+                        <select id="gender" name="gender" required>
+                            <option disabled="disabled" selected="selected">Please select one...</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                    </label>
                 </div>
                 <br>
                 <input type="submit" name="add" value="Register User" id="add">
@@ -136,7 +138,7 @@ include_once('includes/add.php');
                     <tbody>
                     <?php
 
-                    $query = "SELECT * FROM users";
+                    $query = "SELECT * FROM users ORDER BY id desc";
                     $result = mysqli_query($conn, $query);
 
                     while ($row = mysqli_fetch_assoc($result)) {
