@@ -785,3 +785,7 @@ span {
     text-decoration: none;
     color: rgba(255, 255, 255, 0.75);
 }
+
+.inner i {
+    color: rgba(255, 255, 255, 0.75);
+}
