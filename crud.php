@@ -68,13 +68,13 @@ include_once('includes/add.php');
             <form class="text" method="POST" name="form_1" id="form_1">
                 <div>
                     <h5>First Name</h5>
-                    <input type="text" name="first_name" class="form-control" pattern="[a-zA-Z]+"
+                    <input id="first_name" type="text" name="first_name" class="form-control" pattern="[a-zA-Z]+"
                            title="Please enter letters only without any spaces." required>
                 </div>
                 <br>
                 <div>
                     <h5>Last Name</h5>
-                    <input type="text" name="last_name" class="form-control" pattern="[a-zA-Z]+"
+                    <input id="last_name" type="text" name="last_name" class="form-control" pattern="[a-zA-Z]+"
                            title="Please enter letters only without any spaces." required>
                 </div>
                 <br>
