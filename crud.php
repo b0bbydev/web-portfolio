@@ -46,12 +46,16 @@ include_once('includes/add.php');
     <div class="logo">
         <a href="index.php">Web Portfolio <span>by Bobby Jonkman</span></a>
     </div>
+
     <div class="crud">
-        <a href="crud.php">CRUD/Forms</a>
+        <a href="crud.php">Public Data Form</a>
+        <a href="signup_page.php">Register</a>
+        <a href="login_page.php">Log In</a>
+        <a href="welcome_page.php">Welcome</a>
     </div>
 </header>
 
-<!-- Registration Form -->
+<!-- CRUD Page - Public Form -->
 <section id="about" class="wrapper post bg-img" data-bg="banner3.png">
     <div class="inner">
         <article class="box">
