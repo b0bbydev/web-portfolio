@@ -1,14 +1,6 @@
 <?php
-// Initialize the session
+// Initialize the session.
 session_start();
-
-// Check if the user is logged in, if not then redirect him to login page
-/*if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true)
-{
-    header("location: login_page.php");
-    exit;
-}// end of if.*/
-
 ?>
 
 <!DOCTYPE HTML>
@@ -41,10 +33,9 @@ session_start();
         <a href="index.php">Web Portfolio <span>by Bobby Jonkman</span></a>
     </div>
     <div class="crud">
-        <a href="crud.php">Public Data Form</a>
-        <a href="signup_page.php">Register</a>
         <a href="login_page.php">Log In</a>
-        <a href="welcome_page.php">Welcome</a>
+        <a href="includes/logout.php">Log Out</a>
+        <a href="showdb_page.php">Show Database</a>
     </div>
 </header>
 
