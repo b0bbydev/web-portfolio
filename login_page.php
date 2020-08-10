@@ -22,11 +22,7 @@ include_once('includes/login.php');
     <script src="/assets/js/skel.min.js"></script>
     <script src="/assets/js/util.js"></script>
     <script src="/assets/js/main.js"></script>
-    <!-- SweetAlert -->
-    <link rel="stylesheet" href="assets/css/theme-dark/dark.css">
-    <script src="assets/css/sweetalert2/dist/sweetalert2.min.js"></script>
 </head>
-
 
 <body>
 <!-- Header -->
@@ -43,38 +39,27 @@ include_once('includes/login.php');
 <section id="about" class="wrapper post bg-img" data-bg="banner3.png">
     <div class="inner">
         <article class="box">
-            <h2>Log In</h2>
-            <p>Please fill in your credentials to login.</p>
+            <header>
+                <h2>Login</h2>
+                <p>Please fill in your credentials to login.</p>
+            </header>
             <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
-                <div <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>>
+                <div>
                     <h5>Username</h5>
-                    <input id="username" type="text" name="username" class="form-control" value="<?php echo $username; ?>">
-                    <span class="help-block"><?php echo $username_err; ?></span>
+                    <label for="username"><input id="username" value="<?php echo $username ?>" type="text" name="username" class="form-control"></label>
+                    <span class="error"><?php echo (!empty($username_err)) ? $username_err : ''; ?></span>
                 </div>
 
-                <div <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>>
+                <div>
                     <h5>Password</h5>
-                    <input id="password" type="text" name="password" class="form-control" value="<?php echo $password; ?>">
-                    <span class="help-block"><?php echo $password_err; ?></span>
+                    <label for="password"><input id="password" type="text" name="password" class="form-control"></label>
+                    <span class="error"><?php echo (!empty($password_err)) ? $password_err : ''; ?></span>
                 </div>
-
                 <br>
-                <input type="submit" class="btn btn-primary" value="Log In" name="login" id="login">
+                <input type="submit" class="btn btn-primary" value="Login" name="login" id="login">
                 <br>
                 <br>
-                <!-- Success message for log in. -->
-                <div class="success_message"><?php if (isset($_POST['login'])) {
-                        echo '<script type="text/javascript">
-                                                                                        Swal.fire({
-                                                                                        icon: \'success\',
-                                                                                        title: \'Great!\',
-                                                                                        text: \'You have logged in successfully!\',
-                                                                                        timer: 5000,
-                                                                                        timerProgressBar: true,                                                 
-                                                                                        })</script>';
-                    } ?>
-                </div>
-                <p>Don't have an account? <a href="register_page.php">Sign up now</a>.</p>
+                <p>Don't have an account? <a href="register_page.php"><strong>Sign up now</a>.</p>
             </form>
         </article>
     </div>

@@ -45,54 +45,37 @@ include_once('includes/register.php');
         <article class="box">
             <header>
                 <h2>Register</h2>
+                <p>Feel free to register on the website! There is <b>no</b> email validation required as this is purely for demonstration purposes.</p>
             </header>
             <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
-                <div <?php echo (!empty($username_err)) ? 'has-error' : ''; ?>>
-                </div>
-
                 <div>
                     <h5>First Name</h5>
-                    <input id="first_name" type="text" name="first_name" class="form-control" pattern="[a-zA-Z]+"
+                    <input id="first_name" value="<?php echo $first_name ?>" type="text" name="first_name" class="form-control" pattern="[a-zA-Z]+"
                            title="Please enter letters only without any spaces." required>
                 </div>
 
                 <div>
                     <h5>Username</h5>
-                    <input id="username" type="text" name="username" class="form-control"
-                           value="<?php echo $username; ?>">
-                    <span class="help-block"><?php echo $username_err; ?></span>
+                    <label for="username"><input id="username" value="<?php echo $username ?>" type="text" name="username" class="form-control"></label>
+                    <span class="error"><?php echo (!empty($username_err)) ? $username_err : ''; ?></span>
                 </div>
 
-                <div <?php echo (!empty($password_err)) ? 'has-error' : ''; ?>>
+                <div>
                     <h5>Password</h5>
-                    <input id="password" type="text" name="password" class="form-control"
-                           value="<?php echo $password; ?>">
-                    <span class="help-block"><?php echo $password_err; ?></span>
+                    <label for="password"><input id="password" type="text" name="password" class="form-control"></label>
+                    <span class="error"><?php echo (!empty($password_err)) ? $password_err : ''; ?></span>
                 </div>
 
-                <div <?php echo (!empty($confirm_password_err)) ? 'has-error' : ''; ?>>
+                 <div>
                     <h5>Confirm Password</h5>
-                    <input id="confirm_password" type="text" name="confirm_password" class="form-control"
-                           value="<?php echo $confirm_password; ?>">
-                    <span class="help-block"><?php echo $confirm_password_err; ?></span>
-                </div>
+                     <label for="confirm_password"><input id="password" type="text" name="confirm_password" class="form-control"></label>
+                     <span class="error"><?php echo (!empty($confirm_password_err)) ? $confirm_password_err : ''; ?></span>
+                 </div>
                 <br>
                 <input type="submit" class="btn btn-primary" value="Register" name="register" id="register">
                 <br>
                 <br>
-                <p>Already have an account? <a href="login_page.php">Login here</a>.</p>
-                <!-- Success message for registering user. -->
-                <div class="success_message"><?php if (isset($_POST['register'])) {
-                        echo '<script type="text/javascript">
-                                                                                        Swal.fire({
-                                                                                        icon: \'success\',
-                                                                                        title: \'Great!\',
-                                                                                        text: \'You have successfully registered!\',
-                                                                                        timer: 5000,
-                                                                                        timerProgressBar: true,                                                 
-                                                                                        })</script>';
-                    } ?>
-                </div>
+                <p>Already have an account? <a href="login_page.php"><strong>Login here</a>.</strong></p>
             </form>
         </article>
     </div>

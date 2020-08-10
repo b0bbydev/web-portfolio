@@ -1,5 +1,8 @@
 <?php
 include_once('includes/connect.php');
+
+// initialize the session.
+session_start();
 ?>
 
 <!DOCTYPE HTML>
@@ -47,8 +50,18 @@ include_once('includes/connect.php');
     </div>
 
     <div class="crud">
-        <a href="login_page.php">Log In</a>
-        <a href="includes/logout.php">Log Out</a>
+        <!-- If user is not logged in, don't show specific nav options. -->
+        <?php
+        if(!isset($_SESSION['loggedin']))
+        {
+            echo '<a href="login_page.php">Register/Log in</a>
+                     ';
+        } else {
+            echo '<a href="includes/logout.php">Log Out</a>
+                     ';
+        }// end of if-else.
+        ?>
+        <!-- Always show the database page. -->
         <a href="showdb_page.php">Show Database</a>
     </div>
 </header>

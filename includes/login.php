@@ -1,15 +1,9 @@
 <?php
-include_once('includes/connect.php');
-
 // Initialize the session.
 session_start();
 
-// Check if the user is already logged in, if yes then redirect him to welcome page.
-if(isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true)
-{
-    header("location: ../index.php");
-    exit;
-}// end of if.
+// include conn file.
+include_once('includes/connect.php');
 
 
 // Define variables and initialize with empty values.
@@ -23,7 +17,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     // Check if username is empty.
     if(empty(trim($_POST["username"])))
     {
-        $username_err = "Please enter username.";
+        $username_err = "Error! Please enter username.";
     } else {
         $username = trim($_POST["username"]);
     }// end of if-else.
@@ -31,7 +25,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     // Check if password is empty.
     if(empty(trim($_POST["password"])))
     {
-        $password_err = "Please enter your password.";
+        $password_err = "Error! Please enter your password.";
     } else {
         $password = trim($_POST["password"]);
     }// end of if-else.
@@ -67,8 +61,6 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
                         // compare passwords with password_verify().
                         if(password_verify($password, $hashed_password))
                         {
-                            // Password is correct, so start a new session.
-                            //session_start();
 
                             // Store data in session variables.
                             $_SESSION["loggedin"] = true;
@@ -76,7 +68,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
                             $_SESSION["username"] = $username;
 
                             // Redirect user to index page if successful after 5 secs.
-                            header("Refresh:5; url=../index.php");
+                            header("Location: ../index.php");
                         } else {
                             // Display an error message if password is not valid.
                             $password_err = "The password you entered was not valid.";

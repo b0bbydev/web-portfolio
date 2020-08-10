@@ -90,6 +90,7 @@ h1, h2, h3, h4 {
 
 h2 {
     font-size: 1.75em;
+    margin-bottom: .75em;
 }
 
 h3 {
@@ -111,11 +112,6 @@ input, select, textarea {
     margin-bottom: 2em;
     overflow: hidden;
     padding: 3em;
-}
-
-.box header h2 {
-    margin: 0 0 1em 0;
-    color: #fff;
 }
 
 
@@ -336,11 +332,6 @@ header p {
     margin: 0 0 1.5em 0;
 }
 
-header h2 + p {
-    font-size: 1.25em;
-    margin-top: -1em;
-}
-
 header h3 + p {
     font-size: 1.1em;
     margin-top: -0.8em;
@@ -468,6 +459,16 @@ body.subpage {
     line-height: 1.1;
     font-family: "Lobster";
     margin-bottom: .25em;
+    color: rgba(255, 255, 255, 0.75);
+    text-shadow: -2px -2px 0 rgba(0, 0, 0, 0.125);
+    text-transform: none;
+}
+
+.greeting {
+    font-size: 1.4em;
+    line-height: 1.1;
+    font-family: "Lobster";
+    margin-top: 1.5em;
     color: rgba(255, 255, 255, 0.75);
     text-shadow: -2px -2px 0 rgba(0, 0, 0, 0.125);
     text-transform: none;
@@ -821,4 +822,18 @@ tr:hover td {
 
 #message {
     height: 15em;
+}
+
+.error {
+    color: white;
+    padding-top: 1em;
+}
+
+#first_name, #username, #password {
+    cursor: auto;
+}
+
+header p {
+    color: rgba(255, 255, 255, 0.75);
+    padding: .35em;
 }

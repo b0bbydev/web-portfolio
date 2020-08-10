@@ -33,8 +33,18 @@ session_start();
         <a href="index.php">Web Portfolio <span>by Bobby Jonkman</span></a>
     </div>
     <div class="crud">
-        <a href="login_page.php">Log In</a>
-        <a href="includes/logout.php">Log Out</a>
+        <!-- If user is not logged in, don't show specific nav options. -->
+        <?php
+            if(!isset($_SESSION['loggedin']))
+            {
+                echo '<a href="login_page.php">Register/Log in</a>
+                     ';
+            } else {
+                echo '<a href="includes/logout.php">Log Out</a>
+                     ';
+            }// end of if-else.
+        ?>
+        <!-- Always show the database page. -->
         <a href="showdb_page.php">Show Database</a>
     </div>
 </header>
@@ -51,6 +61,10 @@ session_start();
                 <a href="assets/files/Bobby%20Jonkman%20-%20Resume.rar">
                     <button type="submit">Download my resume</button>
                 </a>
+            </div>
+            <div>
+                <!-- Show a greeting when the user is logged in. -->
+                <?php if(isset($_SESSION['username'])) echo '<p class="greeting">Welcome, <b>' . $_SESSION['username'] . '</b> to my web portfolio!</p>' ?>
             </div>
         </header>
     </div>
@@ -223,7 +237,8 @@ session_start();
 <script>
     // This function was also not working when included in js file. Will fix after.
     // the following function enables the 'master' form to show/hide different forms, depending on the selected value.
-    function changeOptions(selectEl) {
+    function changeOptions(selectEl)
+    {
         let selectedValue = selectEl.options[selectEl.selectedIndex].value;
         let subForms = document.getElementsByClassName('text-center');
         for (let i = 0; i < subForms.length; i += 1) {
