@@ -43,7 +43,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
                 // make sure there isn't duplicate usernames.
                 if(mysqli_stmt_num_rows($stmt) == 1)
                 {
-                    $username_err = "This username is already taken.";
+                    $username_err = "Error! This username is already taken.";
                 } else {
                     $username = trim($_POST["username"]);
                 }
@@ -101,7 +101,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
             if(mysqli_stmt_execute($stmt))
             {
                 // Redirect to login page
-                header("Location: ../index.php");
+                header("Location: ../login_page.php");
             } else {
                 echo "Something went wrong. Please try again later.";
             }// end if-else.

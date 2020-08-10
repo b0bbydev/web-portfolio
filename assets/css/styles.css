@@ -755,7 +755,6 @@ select option {
 
 #about h5 {
     text-align: left;
-    padding-bottom: 9px;
     color: rgba(255, 255, 255, 0.75);
     font-size: large;
 }
@@ -826,7 +825,7 @@ tr:hover td {
 
 .error {
     color: white;
-    padding-top: 1em;
+    font-size: medium;
 }
 
 #first_name, #username, #password {

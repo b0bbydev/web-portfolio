@@ -52,23 +52,24 @@ include_once('includes/register.php');
                 <div>
                     <h5>First Name</h5>
                     <input id="first_name" value="<?php echo $first_name ?>" type="text" name="first_name" class="form-control" title="Please enter letters only without any spaces.">
+                    <span class="error"><?php echo (!empty($first_name_err)) ? $first_name_err : ''; ?></span>
                 </div>
 
                 <div>
                     <h5>Username</h5>
-                    <label for="username"><input id="username" value="<?php echo $username ?>" type="text" name="username" class="form-control"></label>
+                    <input id="username" value="<?php echo $username ?>" type="text" name="username" class="form-control">
                     <span class="error"><?php echo (!empty($username_err)) ? $username_err : ''; ?></span>
                 </div>
 
                 <div>
                     <h5>Password</h5>
-                    <label for="password"><input id="password" type="text" name="password" class="form-control"></label>
+                    <input id="password" type="text" name="password" class="form-control">
                     <span class="error"><?php echo (!empty($password_err)) ? $password_err : ''; ?></span>
                 </div>
 
                  <div>
                     <h5>Confirm Password</h5>
-                     <label for="confirm_password"><input id="password" type="text" name="confirm_password" class="form-control"></label>
+                     <input id="password" type="text" name="confirm_password" class="form-control">
                      <span class="error"><?php echo (!empty($confirm_password_err)) ? $confirm_password_err : ''; ?></span>
                  </div>
                 <br>
