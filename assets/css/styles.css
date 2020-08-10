@@ -837,3 +837,27 @@ header p {
     color: rgba(255, 255, 255, 0.75);
     padding: .35em;
 }
+
+.cancel {
+    background-color: #616161a8;
+    color: white !important;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    -moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+    border-radius: 4px;
+    border: 0;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 500;
+    height: 3em;
+    line-height: 2.95em;
+    padding: 0 1.5em;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    text-transform: uppercase;
+    opacity: 0.75;
+    color: rgb(238, 238, 238);
+}

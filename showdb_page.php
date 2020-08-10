@@ -55,10 +55,11 @@ session_start();
         if(!isset($_SESSION['loggedin']))
         {
             echo '<a href="login_page.php">Register/Log in</a>
-                     ';
+                 ';
         } else {
             echo '<a href="includes/logout.php">Log Out</a>
-                     ';
+                  <a href="reset_pass_page.php">Reset Password</a>
+                 ';
         }// end of if-else.
         ?>
         <!-- Always show the database page. -->
@@ -118,7 +119,7 @@ session_start();
             },
             restoreButton: false,
             onSuccess: function (data, textStatus, jqXHR) {
-                if (data.action == 'delete') {
+                if (data.action === 'delete') {
                     $('#' + data.id).remove();
                 }// end of if.
             }

@@ -1,5 +1,5 @@
 <?php
-include_once('includes/login.php');
+include_once('includes/reset_pass.php');
 ?>
 
 <!DOCTYPE HTML>
@@ -22,7 +22,11 @@ include_once('includes/login.php');
     <script src="/assets/js/skel.min.js"></script>
     <script src="/assets/js/util.js"></script>
     <script src="/assets/js/main.js"></script>
+    <!-- SweetAlert -->
+    <link rel="stylesheet" href="assets/css/theme-dark/dark.css">
+    <script src="assets/css/sweetalert2/dist/sweetalert2.min.js"></script>
 </head>
+
 
 <body>
 <!-- Header -->
@@ -35,32 +39,31 @@ include_once('includes/login.php');
     </div>
 </header>
 
-<!-- Login Page -->
+
+<!-- Register Page -->
 <section id="about" class="wrapper post bg-img" data-bg="banner3.png">
     <div class="inner">
         <article class="box">
             <header>
-                <h2>Login</h2>
-                <p>Please fill in your credentials to login.</p>
+                <h2>Reset Password</h2>
+                <p>Fill out the form to reset your password.</p>
             </header>
+
             <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
                 <div>
-                    <h5>Username</h5>
-                    <label for="username"><input id="username" value="<?php echo $username ?>" type="text" name="username" class="form-control"></label>
-                    <span class="error"><?php echo (!empty($username_err)) ? $username_err : ''; ?></span>
+                    <h5>New Password</h5>
+                    <label for="password"><input type="text" name="new_password" class="form-control"></label>
+                    <span class="error"><?php echo (!empty($new_password_err)) ? $new_password_err : ''; ?></span>
                 </div>
 
                 <div>
-                    <h5>Password</h5>
-                    <label for="password"><input id="password" type="text" name="password" class="form-control"></label>
-                    <span class="error"><?php echo (!empty($password_err)) ? $password_err : ''; ?></span>
+                    <h5>Confirm Password</h5>
+                    <label for="password"><input type="text" name="confirm_password" class="form-control"></label>
+                    <span class="error"><?php echo (!empty($confirm_password_err)) ? $confirm_password_err : ''; ?></span>
                 </div>
                 <br>
-                <input type="submit" class="btn btn-primary" value="Login" name="login" id="login">
-                <br>
-                <br>
-                <p>Don't have an account? <a href="register_page.php"><strong>Sign up now</a></strong>.</p>
-                <p>Reset password <a href="reset_pass_page.php"><strong>here</strong>.</p>
+                <input type="submit" class="btn btn-primary" value="Submit">
+                <a class="cancel" href="index.php">Cancel</a>
             </form>
         </article>
     </div>

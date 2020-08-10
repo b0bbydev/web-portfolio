@@ -39,7 +39,8 @@ include_once('includes/register.php');
     </div>
 </header>
 
-<!-- Signup Page -->
+
+<!-- Register Page -->
 <section id="about" class="wrapper post bg-img" data-bg="banner3.png">
     <div class="inner">
         <article class="box">
@@ -50,8 +51,7 @@ include_once('includes/register.php');
             <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="POST">
                 <div>
                     <h5>First Name</h5>
-                    <input id="first_name" value="<?php echo $first_name ?>" type="text" name="first_name" class="form-control" pattern="[a-zA-Z]+"
-                           title="Please enter letters only without any spaces." required>
+                    <input id="first_name" value="<?php echo $first_name ?>" type="text" name="first_name" class="form-control" title="Please enter letters only without any spaces.">
                 </div>
 
                 <div>

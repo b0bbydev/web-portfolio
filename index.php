@@ -41,6 +41,7 @@ session_start();
                      ';
             } else {
                 echo '<a href="includes/logout.php">Log Out</a>
+                      <a href="reset_pass_page.php">Reset Password</a>
                      ';
             }// end of if-else.
         ?>
