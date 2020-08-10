@@ -60,7 +60,6 @@ include_once('includes/login.php');
                 <br>
                 <br>
                 <p>Don't have an account? <a href="register_page.php"><strong>Sign up now</a></strong>.</p>
-                <p>Reset password <a href="reset_pass_page.php"><strong>here</strong>.</p>
             </form>
         </article>
     </div>
