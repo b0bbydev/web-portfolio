@@ -8,32 +8,14 @@ include_once('includes/login.php');
  -->
 
 <html lang="en">
-<head>
-    <title>Portfolio | Bobby Jonkman</title>
-    <meta charset="utf-8"/>
-    <!-- viewport to help view on smaller devices -->
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <!-- link to css file. -->
-    <link rel="stylesheet" href="/assets/css/styles.css"/>
-    <!-- Scripts -->
-    <script src="/assets/js/jquery.min.js"></script>
-    <script src="/assets/js/jquery.scrolly.min.js"></script>
-    <script src="/assets/js/jquery.scrollex.min.js"></script>
-    <script src="/assets/js/skel.min.js"></script>
-    <script src="/assets/js/util.js"></script>
-    <script src="/assets/js/main.js"></script>
-</head>
+
+<!-- Include the head file for styling, js links etc.. -->
+<?php include('partials/head.php'); ?>
 
 <body>
-<!-- Header -->
-<header id="header">
-    <div class="logo">
-        <a href="index.php">Web Portfolio <span>by Bobby Jonkman</span></a>
-    </div>
-    <div class="crud">
-        <a href="showdb_page.php">Show Database</a>
-    </div>
-</header>
+
+<!-- Include the header file which contains the navigation links on the site. -->
+<?php include('partials/header.php'); ?>
 
 <!-- Login Page -->
 <section id="about" class="wrapper post bg-img" data-bg="banner3.png">
@@ -59,7 +41,7 @@ include_once('includes/login.php');
                 <input type="submit" class="btn btn-primary" value="Login" name="login" id="login">
                 <br>
                 <br>
-                <p>Don't have an account? <a href="register_page.php"><strong>Sign up now</a></strong>.</p>
+                <p>Don't have an account? <a href="register_page.php"><strong>Sign up now</strong></a>.</p>
             </form>
         </article>
     </div>
