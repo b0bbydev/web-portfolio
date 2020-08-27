@@ -14,12 +14,10 @@
                      ';
         } else {
             echo '<a href="../includes/logout.php">Log Out</a>
-                      <a href="../reset_pass_page.php">Reset Password</a>
-                     ';
+                  <a href="../reset_pass_page.php">Reset Password</a>
+                  <a href="../showdb_page.php">Show Database</a>
+                 ';
         }// end of if-else.
         ?>
-
-        <!-- Always show the database page. -->
-        <a href="../showdb_page.php">Show Database</a>
     </div>
 </header>
