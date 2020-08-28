@@ -24,7 +24,7 @@ session_start();
             <h3>Software Developer</h3>
             <br>
             <div class="button1" id="button">
-                <a href="assets/files/Bobby%20Jonkman%20-%20Resume.rar">
+                <a href="assets/files/Bobby Jonkman - Resume.zip">
                     <button type="submit">Download my resume</button>
                 </a>
             </div>
