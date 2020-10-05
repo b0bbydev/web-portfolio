@@ -18,7 +18,7 @@ include_once('includes/login.php');
 <?php include('partials/header.php'); ?>
 
 <!-- Login Page -->
-<section id="about" class="wrapper post bg-img" data-bg="banner3.png">
+<section id="about" class="wrapper post bg-img" data-bg="banner3.webp">
     <div class="inner">
         <article class="box">
             <header>

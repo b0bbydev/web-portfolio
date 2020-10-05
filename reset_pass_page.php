@@ -18,7 +18,7 @@ include_once('includes/reset_pass.php');
 <?php include('partials/header.php'); ?>
 
 <!-- Register Page -->
-<section id="about" class="wrapper post bg-img" data-bg="banner3.png">
+<section id="about" class="wrapper post bg-img" data-bg="banner3.webp">
     <div class="inner">
         <article class="box">
             <header>

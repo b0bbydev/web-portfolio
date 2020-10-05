@@ -50,7 +50,7 @@ session_start();
 <?php include('partials/header.php'); ?>
 
 <!-- Table -->
-<section id="about" class="wrapper post bg-img" data-bg="banner2.png">
+<section id="about" class="wrapper post bg-img" data-bg="banner2.webp">
     <div class="inner">
         <article class="box">
             <header>

@@ -17,7 +17,7 @@ session_start();
 <?php include('partials/header.php'); ?>
 
 <!-- Banner -->
-<section id="banner" class="bg-img" data-bg="banner.png">
+<section id="banner" class="bg-img" data-bg="banner.webp">
     <div class="inner">
         <header>
             <h1>Bobby Jonkman</h1>
@@ -38,7 +38,7 @@ session_start();
 
 
 <!-- About -->
-<section id="about" class="wrapper post bg-img" data-bg="banner2.png">
+<section id="about" class="wrapper post bg-img" data-bg="banner2.webp">
     <div class="inner">
         <article class="box">
             <header>
@@ -61,7 +61,7 @@ session_start();
 
 
 <!-- Projects -->
-<section id="about" class="wrapper post bg-img" data-bg="banner3.png">
+<section id="about" class="wrapper post bg-img" data-bg="banner3.webp">
     <div class="inner">
         <article class="box">
             <header>
@@ -70,7 +70,7 @@ session_start();
             </header>
             <div class="content">
                 <figure>
-                    <img src="images/spigot.jpg" alt="Portfolio Item">
+                    <img src="images/spigot.webp" alt="Portfolio Item">
                     <figcaption>
                         <a href="https://github.com/b0bbydev/spigot-server-plugins">
                             <h4>Spigot Plugins</h4>
@@ -80,7 +80,7 @@ session_start();
                 </figure>
 
                 <figure>
-                    <img src="images/project2.png" alt="Portfolio Item">
+                    <img src="images/project2.webp" alt="Portfolio Item">
                     <figcaption>
                         <a href="https://github.com/b0bbydev/town-of-bwg">
                             <h4>Drop-down Menu</h4>
@@ -90,7 +90,7 @@ session_start();
                 </figure>
 
                 <figure>
-                    <img src="images/project3.jpg" alt="Portfolio Item">
+                    <img src="images/project3.webp" alt="Portfolio Item">
                     <figcaption>
                         <a href="https://github.com/b0bbydev/gamepad-arduino">
                             <h4>Gamepad Arduino</h4>
@@ -152,7 +152,7 @@ session_start();
 
 
 <!-- Footer/Contact -->
-<footer id="footer" class="wrapper post bg-img" data-bg="banner4.jpg">
+<footer id="footer" class="wrapper post bg-img" data-bg="banner4.webp">
     <div class="inner">
         <h2>Contact Me</h2>
         <form action="https://formspree.io/moqkayyq" method="post">
