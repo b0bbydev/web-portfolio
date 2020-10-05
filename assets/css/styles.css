@@ -4,9 +4,6 @@
    Modified by: Bobby Jonkman
 */
 
-@import url(font-awesome.min.css);
-@import url("https://fonts.googleapis.com/css?family=Lobster|Open+Sans:300,400,600,700,800");
-
 /* Reset */
 html, body, div, span, h1, h2, h3, h4, p, a, img {
     margin: 0;
