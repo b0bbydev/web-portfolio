@@ -13,7 +13,7 @@
  * Copyright 2011-2021 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
-
+ 
 :root {
 	--bs-blue: #0d6efd;
 	--bs-indigo: #6610f2;
@@ -41,9 +41,7 @@
 	--bs-gradient: linear-gradient( 180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
 }
 
-*,
-::after,
-::before {
+*, ::after, ::before {
 	box-sizing: border-box;
 }
 
@@ -1392,6 +1390,38 @@ textarea.form-control.is-invalid {
 	display: none;
 }
 
+/* Shows the box around nav-link */
+@media (min-width: 992px) {
+	#mainNav {
+	  padding-top: 1.5rem;
+	  padding-bottom: 1.5rem;
+	  transition: padding-top 0.3s, padding-bottom 0.3s;
+	}
+	#mainNav .navbar-brand {
+	  font-size: 1.75em;
+	  transition: font-size 0.3s;
+	}
+	#mainNav .navbar-nav {
+	  margin-top: 0;
+	}
+	#mainNav .navbar-nav > li.nav-item > a.nav-link.active {
+	  color: #fff;
+	  background: #746c70;
+	}
+	#mainNav .navbar-nav > li.nav-item > a.nav-link.active:active, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:focus, #mainNav .navbar-nav > li.nav-item > a.nav-link.active:hover {
+	  color: #fff;
+	  background: #746c70;
+	}
+  
+	#mainNav.navbar-shrink {
+	  padding-top: 0.5rem;
+	  padding-bottom: 0.5rem;
+	}
+	#mainNav.navbar-shrink .navbar-brand {
+	  font-size: 1.5em;
+	}
+  }
+
 .nav {
 	display: flex;
 	flex-wrap: wrap;
@@ -1420,7 +1450,7 @@ textarea.form-control.is-invalid {
 }
 
 .nav-link.disabled {
-	color: #6c757d;
+	color: #7a6c7d;
 	pointer-events: none;
 	cursor: default;
 }
@@ -3646,6 +3676,12 @@ html {
 	margin-right: auto;
 }
 
-input:focus {
-  color: red;
+/* keeps modal in view and not off screen. */
+.modal.show .modal-dialog {
+    transform: none;
+}
+
+#name-error, #email-error, #message-error {
+	position: relative;
+	color: red;
 }
