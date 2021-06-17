@@ -3685,3 +3685,11 @@ html {
 	position: relative;
 	color: red;
 }
+
+.successMessage {
+	display: none;
+}
+
+.successMessage.show {
+	display: block;
+}

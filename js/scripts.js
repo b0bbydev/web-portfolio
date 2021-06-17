@@ -49,20 +49,21 @@ window.addEventListener("DOMContentLoaded", (event) => {
 });
 
 // Wait for the DOM to be ready
-$(function () {
+$(document).ready(function () {
   // Initialize form validation on the registration form.
-  // It has the name attribute "registration"
+  // It has the name attribute "form"
   $("form[name='form']").validate({
     // Specify validation rules
     rules: {
       // The key name on the left side is the name attribute
       // of an input field. Validation rules are defined
       // on the right side
-      message: "required",
+      message: {
+        required: true,
+        minlength: 5,
+      },
       email: {
         required: true,
-        // Specify that email should be validated
-        // by the built-in "email" rule
         email: true,
       },
       name: {
@@ -74,13 +75,30 @@ $(function () {
     messages: {
       name: "Must be at least 3 characters",
       email: "Please enter a valid email address",
-      message: "Please enter a message",
+      message: "Must be at least 5 characters",
+    },
+
+    // disable the submitButton until the form is valid.
+    success: function () {
+      if ($("#contactForm").validate().checkForm()) {
+        $("#submitButton").removeClass("disabled").prop("disabled", false); // enables button
+      }
     },
 
     // Make sure the form is submitted to the destination defined
     // in the "action" attribute of the form when valid
     submitHandler: function (form) {
-      form.submit();
+      form.submit(form);
     },
   });
+});
+
+// the submitButton is only clickable when the form is valid, once it's valid - display a success message.
+$("#submitButton").on("click", function () {
+  Swal.fire({
+    icon: 'success',
+    title: 'Great!',
+    text: 'Your message was sent!',
+    timer: 2000
+  })
 });

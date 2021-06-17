@@ -209,30 +209,32 @@
             <!-- Contact Section Form-->
             <div class="row justify-content-center">
                 <div class="col-lg-8 col-xl-7">
-                    <form id="contactForm" action="#contact" name="form">
+                    <form id="contactForm" action="#page-top" name="form">
                         <!-- Name input-->
                         <div class="form-floating mb-3">
-                            <input class="form-control" name="name" id="name" type="text" placeholder="Enter your name..." required>
+                            <input class="form-control" name="name" id="name" type="text"
+                                placeholder="Enter your name..." required>
                             <label for="name" class="form-label">Full name</label>
                         </div>
                         <!-- Email address input-->
                         <div class="form-floating mb-3">
-                            <input class="form-control" id="email" type="email" placeholder="name@example.com" required>
+                            <input class="form-control" id="email" type="email" name="email"
+                                placeholder="name@example.com" required>
                             <label for="email" class="form-label">Email address</label>
                         </div>
                         <!-- Message input-->
                         <div class="form-floating mb-3">
-                            <textarea class="form-control" id="message" type="text"
+                            <textarea class="form-control" id="message" type="text" name="message"
                                 placeholder="Enter your message here..." style="height: 10rem" required></textarea>
                             <label for="message" class="form-label">Message</label>
                         </div>
-                        <div class="d-none" id="success">
+                        <div class="successMessage" name="successMessage" id="successMessage" style="display: none;">
                             <div class="text-center mb-3">
                                 <div class="fw-bolder">Form submission successful!</div>
                             </div>
                         </div>
                         <!-- Submit Button-->
-                        <button class="btn btn-primary btn-xl" id="submitButton" type="submit">Send</button>
+                        <button class="btn btn-primary btn-xl" id="submitButton" type="submit" disabled>Send</button>
                     </form>
                 </div>
             </div>
@@ -496,6 +498,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"
         integrity="sha512-37T7leoNS06R80c8Ulq7cdCDU5MNQBwlYoy1TX/WUsLFC2eYNqtKlV0QjH7r8JpG/S0GUMZwebnVFLPd6SU5yg=="
         crossorigin="anonymous"></script>
+    <!-- SweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.17/dist/sweetalert2.all.min.js"
+        integrity="sha256-/A5TntSW7qgHFs6AcLw31t3ExTWuFBXgBAIkUZqX6o0=" crossorigin="anonymous"></script>
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
 </body>
