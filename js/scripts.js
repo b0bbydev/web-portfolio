@@ -92,13 +92,3 @@ $(document).ready(function () {
     },
   });
 });
-
-// the submitButton is only clickable when the form is valid, once it's valid - display a success message (SweetAlert).
-$("#submitButton").on("click", function () {
-  Swal.fire({
-    icon: 'success',
-    title: 'Great!',
-    text: 'Your message was sent!',
-    timer: 2000
-  })
-});
