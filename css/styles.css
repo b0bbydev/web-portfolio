@@ -1815,7 +1815,7 @@ textarea.form-control.is-invalid {
 	flex-direction: column;
 	width: 100%;
 	pointer-events: auto;
-	background-color: #375167;
+	background-color: #4e4f50;
 	background-clip: padding-box;
 	border: 0.125rem solid rgba(0, 0, 0, 0.2);
 	border-radius: 0.75rem;
