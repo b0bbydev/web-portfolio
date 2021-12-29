@@ -1,0 +1,8 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/bobbcuex/public_html/
+    - /bin/cp index.html $DEPLOYPATH
+    - /bin/cp assets/ $DEPLOYPATH
+    - /bin/cp css/ $DEPLOYPATH
+    - /bin/cp js/ $DEPLOYPATH
